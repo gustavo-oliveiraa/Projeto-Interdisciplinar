@@ -1,10 +1,10 @@
-#include<stdio.h>//Biblioteca respons·vel pelo uso do printf e do scanf.
+#include<stdio.h>//Biblioteca respons√°vel pelo uso do printf e do scanf.
 #include<string.h>//Biblioteca para ler strings, strlen e stromp: http://linguagemc.com.br/a-biblioteca-string-h/
 #include<stdlib.h>//Biblioteca para o uso do comando system("pause").
 #include<ctype.h>//Biblioteca para o uso do toupper e tolower: http://linguagemc.com.br/ctype-h-toupper-tolower-isalpha-isdigit-em-c/
-#include<locale.h>//Biblioteca para uso de acentuaÁ„o dentro do printf. 
+#include<locale.h>//Biblioteca para uso de acentua√ß√£o dentro do printf. 
 
-typedef struct{//FunÁ„o struct onde definem tipos de dados que agrupam vari·veis sob um mesmo tipo de dado. 
+typedef struct{//Fun√ß√£o struct onde definem tipos de dados que agrupam vari√°veis sob um mesmo tipo de dado. 
   char tituloFoto[50];
   float precoFoto;
   int quantidadeFoto;
@@ -15,18 +15,18 @@ typedef struct{
     int idade;
 }pessoa;//Novo tipo de dado.
 
-int main(){//FunÁ„o main serve como o ponto de partida para a execuÁ„o do programa.
+int main(){//Fun√ß√£o main serve como o ponto de partida para a execu√ß√£o do programa.
     setlocale(LC_ALL, "Portuguese");//Direciona a biblioteca ao idioma que vai ser usado pelo <locale.h>.
     char opcaoPortifolio, opcaoFotos[10], nomeCliente[50], emailCliente[30], opcaoComprar, confirmacaoCadastro; 
-    char emailPaypal[50], senhaPaypal[50];//Comando para declarar as vari·veis e armazenar no espaÁo da memÛria, do tipo caractere.    
-    int contador, album, fotosEscolhidas, x;//Comando para declarar as vari·veis e armazenar no espaÁo da memÛria, do tipo inteiro.
+    char emailPaypal[50], senhaPaypal[50];//Comando para declarar as vari√°veis e armazenar no espa√ßo da mem√≥ria, do tipo caractere.    
+    int contador, album, fotosEscolhidas, x;//Comando para declarar as vari√°veis e armazenar no espa√ßo da mem√≥ria, do tipo inteiro.
     int numCliente, precoCarrinho=0;
-    foto carrinho[10], tabela[10];//DeclaraÁ„o das v·riaveis do tipo struct, criados a cima.
+    foto carrinho[10], tabela[10];//Declara√ß√£o das v√°riaveis do tipo struct, criados a cima.
     
-    tabela[0].precoFoto = 350;//Fazer com que o preÁo da foto 0 da tabela receba esse preÁo.
-	    strcpy(tabela[0].tituloFoto, "Os Shelbys");//Uma string que faz o que est· escrito a direita, seja o que foi declarado a esquerda.
+    tabela[0].precoFoto = 350;//Fazer com que o pre√ßo da foto 0 da tabela receba esse pre√ßo.
+	    strcpy(tabela[0].tituloFoto, "Os Shelbys");//Uma string que faz o que est√° escrito a direita, seja o que foi declarado a esquerda.
     tabela[1].precoFoto = 250;
-		strcpy(tabela[1].tituloFoto, "RelÌquias da Morte");
+		strcpy(tabela[1].tituloFoto, "Rel√≠quias da Morte");
     tabela[2].precoFoto = 250;
 		strcpy(tabela[2].tituloFoto, "Invincible");
     tabela[3].precoFoto = 400;
@@ -36,32 +36,32 @@ int main(){//FunÁ„o main serve como o ponto de partida para a execuÁ„o do progra
     tabela[5].precoFoto = 350;
 		strcpy(tabela[5].tituloFoto, "Bella Ciao");
     
-    printf("----------------------------------------Bem vindo ao ProtÛtipo do PortfÛlio!--------------------------------------------\n");//Comando que printa na tela o que foi escrito dentro dos parÍnteses, para o usu·rio.
+    printf("----------------------------------------Bem vindo ao Prot√≥tipo do Portif√≥lio!--------------------------------------------\n");//Comando que printa na tela o que foi escrito dentro dos par√™nteses, para o usu√°rio.
     
-    printf("Quantas pessoas desejam se cadastrar?\n");//Comando que printa na tela o que foi escrito dentro dos parÍnteses, para o usu·rio.
-    scanf("%d", &numCliente);//Comando que salva as vari·veis na memÛria onde foi declarado pelo int e char.
-    fflush(stdin);//Comando para limpar o buffer de memÛria.
-    pessoa cliente[numCliente];//Vari·vel do novo tipo de dado.
+    printf("Quantas pessoas desejam se cadastrar?\n");//Comando que printa na tela o que foi escrito dentro dos par√™nteses, para o usu√°rio.
+    scanf("%d", &numCliente);//Comando que salva as vari√°veis na mem√≥ria onde foi declarado pelo int e char.
+    fflush(stdin);//Comando para limpar o buffer de mem√≥ria.
+    pessoa cliente[numCliente];//Vari√°vel do novo tipo de dado.
 
-    for(contador=0;contador<numCliente;contador++){// FunÁ„o "para", È utilizada para um n˙mero especÌfivo de repetiÁıes, diferente do "faÁa" ou "faÁa enquanto".
-    	do{//FunÁ„o "faÁa enquanto" onde se repete algo ate que a condiÁ„o se torne falsa e obrigatoriamente deve ser realizado uma vez..
-			printf("Precisaremos de seu cadastro para futuras operaÁıes dentro do site.\n");
+    for(contador=0;contador<numCliente;contador++){// Fun√ß√£o "para", √© utilizada para um n√∫mero espec√≠fivo de repeti√ß√µes, diferente do "fa√ßa" ou "fa√ßa enquanto".
+    	do{//Fun√ß√£o "fa√ßa enquanto" onde se repete algo ate que a condi√ß√£o se torne falsa e obrigatoriamente deve ser realizado uma vez..
+			printf("Precisaremos de seu cadastro para futuras opera√ß√µes dentro do site.\n");
     		printf("Digite seu nome completo:");
-    		fgets(cliente[contador].nome, 50, stdin);//Comando para salvar uma vari·vel na memÛria, È como o scanf, mas ele consegue salvar os espaÁos entre nomes, conseguindo dar mais nomes. 
+    		fgets(cliente[contador].nome, 50, stdin);//Comando para salvar uma vari√°vel na mem√≥ria, √© como o scanf, mas ele consegue salvar os espa√ßos entre nomes, conseguindo dar mais nomes. 
     		fflush(stdin);
     		do{
     			printf("Digite sua idade (deve ser maior de 18 para se cadastrar): ");
     			scanf("%d", &cliente[contador].idade);
    				fflush(stdin);
-			}while(cliente[contador].idade  < 18 || cliente[contador].idade > 120);//FunÁ„o "enquanto", enquanto a condiÁ„o se manter, o que est· acima ser· executado, quando n„o estiver mais na condiÁ„o encerra-se a repetiÁ„o.
+			}while(cliente[contador].idade  < 18 || cliente[contador].idade > 120);//Fun√ß√£o "enquanto", enquanto a condi√ß√£o se manter, o que est√° acima ser√° executado, quando n√£o estiver mais na condi√ß√£o encerra-se a repeti√ß√£o.
 			printf("Digite seu email:");
     		scanf("%s", &cliente[contador].email);
     		fflush(stdin);
-    		printf("Digite seu endereÁo:");
+    		printf("Digite seu endere√ßo:");
     		fgets(cliente[contador].endereco, 60, stdin);
     		fflush(stdin);
-    		printf("Nome: %sIdade: %d \nEmail: %s \nEndereÁo: %s", cliente[contador].nome, cliente[contador].idade, cliente[contador].email, cliente[contador].endereco);
-    		printf("Seus dados est„o corretos S (sim) ou N (n„o)?\n");
+    		printf("Nome: %sIdade: %d \nEmail: %s \nEndere√ßo: %s", cliente[contador].nome, cliente[contador].idade, cliente[contador].email, cliente[contador].endereco);
+    		printf("Seus dados est√£o corretos S (sim) ou N (n√£o)?\n");
     		scanf("%c", &confirmacaoCadastro);
     		fflush(stdin);
     	}while(confirmacaoCadastro == 'n' || confirmacaoCadastro == 'N');
@@ -69,51 +69,51 @@ int main(){//FunÁ„o main serve como o ponto de partida para a execuÁ„o do progra
     
     system("cls");//Comando "system("cls")" para limpar a tela, deixando a janela sem nada.
 
-    printf("Deseja ter acesso ao portifÛlio S (sim) ou N (n„o):\n");
+    printf("Deseja ter acesso ao portif√≥lio S (sim) ou N (n√£o):\n");
     scanf("%c", &opcaoPortifolio);
     fflush(stdin);
-    if(opcaoPortifolio == 's' || opcaoPortifolio == 'S'){//Comando "se" para executar algo, se a condiÁ„o declarada entre parÍnteses for verdadeira ou falsa, dependendo da condiÁ„o.
+    if(opcaoPortifolio == 's' || opcaoPortifolio == 'S'){//Comando "se" para executar algo, se a condi√ß√£o declarada entre par√™nteses for verdadeira ou falsa, dependendo da condi√ß√£o.
     	
 		printf("FOTOS:\n");
-        printf("id: 0, titulo: %s, preÁo: %.1f\n", tabela[0].tituloFoto, tabela[0].precoFoto);
-        printf("id: 1, titulo: %s, preÁo: %.1f\n", tabela[1].tituloFoto, tabela[1].precoFoto);
-        printf("id: 2, titulo: %s, preÁo: %.1f\n", tabela[2].tituloFoto, tabela[2].precoFoto);
-        printf("id: 3, titulo: %s, preÁo: %.1f\n", tabela[3].tituloFoto, tabela[3].precoFoto);
-        printf("id: 4, titulo: %s, preÁo: %.1f\n", tabela[4].tituloFoto, tabela[4].precoFoto);
-        printf("id: 5, titulo: %s, preÁo: %.1f\n", tabela[5].tituloFoto, tabela[5].precoFoto);
+        printf("id: 0, titulo: %s, pre√ßo: %.1f\n", tabela[0].tituloFoto, tabela[0].precoFoto);
+        printf("id: 1, titulo: %s, pre√ßo: %.1f\n", tabela[1].tituloFoto, tabela[1].precoFoto);
+        printf("id: 2, titulo: %s, pre√ßo: %.1f\n", tabela[2].tituloFoto, tabela[2].precoFoto);
+        printf("id: 3, titulo: %s, pre√ßo: %.1f\n", tabela[3].tituloFoto, tabela[3].precoFoto);
+        printf("id: 4, titulo: %s, pre√ßo: %.1f\n", tabela[4].tituloFoto, tabela[4].precoFoto);
+        printf("id: 5, titulo: %s, pre√ßo: %.1f\n", tabela[5].tituloFoto, tabela[5].precoFoto);
     	
-    	printf("Deseja comprar alguma dessas fotos S (sim) ou N (n„o)?\n");
+    	printf("Deseja comprar alguma dessas fotos S (sim) ou N (n√£o)?\n");
     	scanf("%c", &opcaoComprar);
     	fflush(stdin);
     	while(opcaoComprar == 's' || opcaoComprar == 'S'){
     		printf("Qual o Id da foto desejada:");
             scanf("%d", &x);
             fflush(stdin);
-            printf("Quantos quadros dessa foto vocÍ deseja:");
+            printf("Quantos quadros dessa foto voc√™ deseja:");
             scanf("%d", &carrinho[x].quantidadeFoto);
             fflush(stdin);
             carrinho[x].precoFoto=tabela[x].precoFoto;
             for(contador = 0; contador < 50; contador++){
                 if(tabela[x].tituloFoto[contador] == '\n'){
-                    contador = 50;//AÁ„o para que se tenha todas as letras do filme.
+                    contador = 50;//A√ß√£o para que se tenha todas as letras do filme.
                     continue;
                 }
             	carrinho[x].tituloFoto[contador] = tabela[x].tituloFoto[contador];//Igualando os nomes das fotos do carrinho ao da tabela.
             }
-            precoCarrinho += carrinho[x].quantidadeFoto * carrinho[x].precoFoto;//CÛdigo para a soma dos itens do carrinho.
+            precoCarrinho += carrinho[x].quantidadeFoto * carrinho[x].precoFoto;//C√≥digo para a soma dos itens do carrinho.
             printf("Item(s) adicionados ao carrinho com sucesso.\n");
             
  			system("cls");//Comando "system("cls")" para limpar a tela, deixando a janela sem nada.       
             
         	printf("FOTOS:\n");
-        	printf("Id: 0, tÌtulo: %s, preÁo: %.1f\n", tabela[0].tituloFoto, tabela[0].precoFoto);
-        	printf("Id: 1, tÌtulo: %s, preÁo: %.1f\n", tabela[1].tituloFoto, tabela[1].precoFoto);
-        	printf("Id: 2, tÌtulo: %s, preÁo: %.1f\n", tabela[2].tituloFoto, tabela[2].precoFoto);
-        	printf("Id: 3, tÌtulo: %s, preÁo: %.1f\n", tabela[3].tituloFoto, tabela[3].precoFoto);
-        	printf("Id: 4, tÌtulo: %s, preÁo: %.1f\n", tabela[4].tituloFoto, tabela[4].precoFoto);
-        	printf("Id: 5, tÌtulo: %s, preÁo: %.1f\n", tabela[5].tituloFoto, tabela[5].precoFoto);
+        	printf("Id: 0, t√≠tulo: %s, pre√ßo: %.1f\n", tabela[0].tituloFoto, tabela[0].precoFoto);
+        	printf("Id: 1, t√≠tulo: %s, pre√ßo: %.1f\n", tabela[1].tituloFoto, tabela[1].precoFoto);
+        	printf("Id: 2, t√≠tulo: %s, pre√ßo: %.1f\n", tabela[2].tituloFoto, tabela[2].precoFoto);
+        	printf("Id: 3, t√≠tulo: %s, pre√ßo: %.1f\n", tabela[3].tituloFoto, tabela[3].precoFoto);
+        	printf("Id: 4, t√≠tulo: %s, pre√ßo: %.1f\n", tabela[4].tituloFoto, tabela[4].precoFoto);
+        	printf("Id: 5, t√≠tulo: %s, pre√ßo: %.1f\n", tabela[5].tituloFoto, tabela[5].precoFoto);
             
-            printf("Deseja adicionar mais algum item em seu carrinho S (sim) ou N (n„o)?\n");
+            printf("Deseja adicionar mais algum item em seu carrinho S (sim) ou N (n√£o)?\n");
             scanf("%c", &opcaoComprar);
             fflush(stdin);
 		}
@@ -121,8 +121,8 @@ int main(){//FunÁ„o main serve como o ponto de partida para a execuÁ„o do progra
 		
 	system("cls");
 		
-	printf("O preÁo total do carrinho ficou: %d\n", precoCarrinho);
-	printf("O pagamento ser· realizado com Paypal.\n");
+	printf("O pre√ßo total do carrinho ficou: %d\n", precoCarrinho);
+	printf("O pagamento ser√° realizado com Paypal.\n");
 	printf("Digite seu email do PayPal:");
 	scanf("%s", &emailPaypal);
 	fflush(stdin);
@@ -130,7 +130,7 @@ int main(){//FunÁ„o main serve como o ponto de partida para a execuÁ„o do progra
 	scanf("%s", &senhaPaypal);
 	fflush(stdin);
 	printf("Sua compra foi aprovada com sucesso!\n");
-	printf("SimulaÁ„o do protÛtipo finalizada!\n");
+	printf("Simula√ß√£o do prot√≥tipo finalizada!\n");
 		
 	system("pause");//Comando "system("pause")" para dar uma pausa no programa, saindo da pausa ao apertar qualquer tecla.
 	return 0;//Comando para que o valor do algortimo retorne a zero.
